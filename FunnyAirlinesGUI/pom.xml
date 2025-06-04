@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.kando.funnyairlinesgui/com.example.kando.funnyairlinesgui.HelloApplication
+                                com.example.kando.funnyairlinesgui/com.example.kando.funnyairlinesgui.FunnyAirlinesApplication
                             </mainClass>
                         </configuration>
                     </execution>
