@@ -65,5 +65,8 @@ public class Main {
                     ", Price: "+flightPassenger.Price+" HUF");
         }
 
+        // 7. feladat
+        double avg = 1.0* sumOfJegyek / flightPassengerList.size();
+        System.out.println("7. Jegyek átlagára: "+Math.round(avg)+" Ft");
     }
 }
