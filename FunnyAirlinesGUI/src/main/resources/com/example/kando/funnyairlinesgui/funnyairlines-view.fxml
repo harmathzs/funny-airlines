@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" prefWidth="900" prefHeight="600">
+    <top>
+        <VBox>
+            <HBox spacing="10">
+                <Label text="Szűrés névre/járatszámra:"/>
+                <TextField fx:id="filterField" promptText="Név vagy járatszám"/>
+                <Label text="Szűrés jegyárra (átlagárnál drágább vagy olcsóbb):"/>
+                <ComboBox fx:id="airlineCombo"/>
+                <CheckBox fx:id="bpCheckBox" text="Csak Budapestre tartó járatok"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Rendezés ár szerint:"/>
+                <!-- ToggleGroup NEM kerül az HBox-ba, csak a RadioButton-ok -->
+                <RadioButton fx:id="ascRadio" text="Növekvő" selected="true"/>
+                <RadioButton fx:id="descRadio" text="Csökkenő" />
+                <Button fx:id="filterButton" text="Szűrés frissítése"/>
+            </HBox>
+			<HBox>
+				<Label text="Megjelenített jegyek száma:"/>
+				<Label fx:id="countLabel" text="0"/>
+				<Label text="Összérték:"/>
+				<Label fx:id="sumLabel" text="0 Ft"/>
+				<Label text="Átlagár:"/>
+				<Label fx:id="avgLabel" text="0 Ft"/>
+			</HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="flightTable" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="colFlightNumber" text="Járatszám"/>
+                <TableColumn fx:id="colSource" text="Indulás"/>
+                <TableColumn fx:id="colDestination" text="Érkezés"/>
+                <TableColumn fx:id="colPassengerName" text="Utasnév"/>
+                <TableColumn fx:id="colTicketId" text="JegyID"/>
+                <TableColumn fx:id="colSeatNumber" text="Ülőhely"/>
+                <TableColumn fx:id="colPrice" text="Ár"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+
+    </bottom>
+</BorderPane>
