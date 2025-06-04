@@ -1,9 +1,17 @@
 package com.example.kando.funnyairlinesgui;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-public class FunnyAirlinesController {
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class FunnyAirlinesController implements Initializable {
     @FXML public TextField filterField;
     @FXML public ComboBox airlineCombo;
     @FXML public CheckBox bpCheckBox;
@@ -20,5 +28,15 @@ public class FunnyAirlinesController {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // ComboBox
+        List<String> comboStrOptions = new ArrayList<>();
+        comboStrOptions.add("átlagártól olcsóbbakat");
+        comboStrOptions.add("átlagártól drágábbakat");
+        ObservableList<String> comboOptions = FXCollections.observableList(comboStrOptions);
+        airlineCombo.setItems(comboOptions);
     }
 }
