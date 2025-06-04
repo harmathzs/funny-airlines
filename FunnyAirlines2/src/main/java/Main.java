@@ -34,5 +34,18 @@ public class Main {
             sumOfJegyek += flightPassenger.Price;
         }
         System.out.println("4. Jegyek összértéke: "+sumOfJegyek+" Ft");
+
+        // 5. feladat
+        FlightPassenger legdragabb = flightPassengerList.get(0);
+        for (int i=1; i< flightPassengerList.size(); i++) {
+            if (flightPassengerList.get(i).Price > legdragabb.Price) {
+                legdragabb = flightPassengerList.get(i);
+            }
+        }
+        System.out.println("5. Legdrágább jegy:");
+        System.out.println("Utas neve: "+legdragabb.PassengerName);
+        System.out.println("Utas azonosító: "+legdragabb.PassengerId);
+        System.out.println("Járatszám: "+legdragabb.FlightNumber);
+        System.out.println("Ár: "+legdragabb.Price+" Ft");
     }
 }
