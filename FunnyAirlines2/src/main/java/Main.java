@@ -18,5 +18,8 @@ public class Main {
             flightPassengerList.add(new FlightPassenger(fileLine));
         }
         System.out.println("1. Adatok beolvasva.");
+
+        // 2. feladat
+        System.out.println("2. Különböző járatok száma: "+flightPassengerList.size());
     }
 }
