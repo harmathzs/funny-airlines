@@ -11,7 +11,7 @@
                 <Label text="Szűrés névre/járatszámra:"/>
                 <TextField fx:id="filterField" promptText="Név vagy járatszám"/>
                 <Label text="Szűrés jegyárra (átlagárnál drágább vagy olcsóbb):"/>
-                <ComboBox fx:id="airlineCombo"/>
+                <ComboBox fx:id="airlineCombo" promptText="Make your choice..." />
                 <CheckBox fx:id="bpCheckBox" text="Csak Budapestre tartó járatok"/>
             </HBox>
             <HBox spacing="10">
