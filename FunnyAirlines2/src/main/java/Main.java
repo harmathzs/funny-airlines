@@ -27,5 +27,12 @@ public class Main {
             passengerIds.add(flightPassenger.PassengerId);
         }
         System.out.println("3. Egyedi utasok száma: "+passengerIds.size());
+
+        // 4. feladat
+        int sumOfJegyek = 0;
+        for (FlightPassenger flightPassenger: flightPassengerList) {
+            sumOfJegyek += flightPassenger.Price;
+        }
+        System.out.println("4. Jegyek összértéke: "+sumOfJegyek+" Ft");
     }
 }
