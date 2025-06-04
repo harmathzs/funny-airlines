@@ -68,5 +68,38 @@ public class Main {
         // 7. feladat
         double avg = 1.0* sumOfJegyek / flightPassengerList.size();
         System.out.println("7. Jegyek átlagára: "+Math.round(avg)+" Ft");
+
+        // 8. feladat
+        System.out.print("8. Kérem az utas nevét: ");
+        Scanner stdin = new Scanner(System.in);
+        String inName = stdin.nextLine();
+        int passengerId = 0;
+        List<String> jaratai = new ArrayList<>();
+        int jegyDb = 0;
+        for (FlightPassenger flightPassenger: flightPassengerList) {
+            if (Objects.equals(flightPassenger.PassengerName, inName)) {
+                jegyDb++;
+                jaratai.add(flightPassenger.FlightNumber);
+                passengerId = flightPassenger.PassengerId;
+            }
+        }
+        if (passengerId>0) {
+            System.out.println(inName + " (" + passengerId + ") jegyeinek száma: " + jegyDb);
+        } else {
+            System.out.println("Ilyen utasnév nem található.");
+        }
+
+        if (!jaratai.isEmpty()) {
+            if (jaratai.size()>1) {
+                System.out.print("Járatai: ");
+                for (int i=0; i < jaratai.size()-1; i++) {
+                    System.out.print(jaratai.get(i)+", ");
+                }
+                System.out.println(jaratai.get(jaratai.size()-1));
+            } else {
+                System.out.println("Járat: "+jaratai.get(0));
+            }
+        }
+
     }
 }
