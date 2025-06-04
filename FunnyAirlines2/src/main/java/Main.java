@@ -47,5 +47,23 @@ public class Main {
         System.out.println("Utas azonosító: "+legdragabb.PassengerId);
         System.out.println("Járatszám: "+legdragabb.FlightNumber);
         System.out.println("Ár: "+legdragabb.Price+" Ft");
+
+        // 6. feladat
+        List<FlightPassenger> bpre = new ArrayList<>();
+        for (FlightPassenger flightPassenger: flightPassengerList) {
+            if (Objects.equals(flightPassenger.Destination, "Budapest")) {
+                bpre.add(flightPassenger);
+            }
+        }
+        System.out.println("6. Budapestre tartó járatok:");
+        for (FlightPassenger flightPassenger: bpre) {
+            System.out.println(
+                    "FlightNumber: "+flightPassenger.FlightNumber+
+                    ", Source: "+flightPassenger.Source+
+                    ", Passenger: "+flightPassenger.PassengerName+
+                    ", PassengerId: "+flightPassenger.PassengerId+
+                    ", Price: "+flightPassenger.Price+" HUF");
+        }
+
     }
 }
