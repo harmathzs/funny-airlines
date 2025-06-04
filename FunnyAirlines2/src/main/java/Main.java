@@ -1,8 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static List<FlightPassenger> flightPassengerList = new ArrayList<>();
@@ -21,5 +19,13 @@ public class Main {
 
         // 2. feladat
         System.out.println("2. Különböző járatok száma: "+flightPassengerList.size());
+
+        // 3. feladat
+        // megoldás HashSet-tel:
+        Set<Integer> passengerIds = new HashSet<>();
+        for (FlightPassenger flightPassenger: flightPassengerList) {
+            passengerIds.add(flightPassenger.PassengerId);
+        }
+        System.out.println("3. Egyedi utasok száma: "+passengerIds.size());
     }
 }
