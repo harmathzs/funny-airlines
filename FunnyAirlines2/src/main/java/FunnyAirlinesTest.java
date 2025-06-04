@@ -10,10 +10,25 @@ public class FunnyAirlinesTest {
         Main.isRunningTest = true;
     }
 
+
     @Test
-    public void testMain() throws FileNotFoundException {
+    public void testGipszJakab() throws FileNotFoundException {
+        Main.testInputPassengerName = "Gipsz Jakab";
         Main.main(null);
     }
+
+    @Test
+    public void testJaneSmith() throws FileNotFoundException {
+        Main.testInputPassengerName = "Jane Smith";
+        Main.main(null);
+    }
+
+    @Test
+    public void testMickeyMouse() throws FileNotFoundException {
+        Main.testInputPassengerName = "Mickey Mouse";
+        Main.main(null);
+    }
+
 
     @AfterClass
     public static void testAfterAll() {

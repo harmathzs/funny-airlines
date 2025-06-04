@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
     public static boolean isRunningTest = false;
+    public static String testInputPassengerName;
 
     public static List<FlightPassenger> flightPassengerList = new ArrayList<>();
 
@@ -74,7 +75,7 @@ public class Main {
         // 8. feladat
         System.out.print("8. Kérem az utas nevét: ");
         Scanner stdin = new Scanner(System.in);
-        String inName = isRunningTest ? "Gipsz Jakab" : stdin.nextLine();
+        String inName = isRunningTest ? testInputPassengerName : stdin.nextLine();
         int passengerId = 0;
         List<String> jaratai = new ArrayList<>();
         int jegyDb = 0;
